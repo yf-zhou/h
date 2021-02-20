@@ -1,0 +1,20 @@
+body {
+	background-image: url('images/tea_logo.png'), url('images/main_frame.png');
+	background-position: left top, left top;
+	background-size: auto, 100% 1200px;
+	background-repeat: no-repeat, no-repeat;
+}
+h1 {
+	color: pink;
+	position: relative;
+	left: 70px;
+}
+a{
+	color: white;
+}
+form{
+	color: white;
+}
+label {
+	color: white;
+}
