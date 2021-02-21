@@ -1,5 +1,5 @@
 
---create database VirtualTeaClub;
+create database VirtualTeaClub;
 
 use VirtualTeaClub;
 
