@@ -1,17 +1,17 @@
 
-create database VirtualTeaClub;
+--create database VirtualTeaClub;
 
 use VirtualTeaClub;
 
 create table Userr
-(name char(30) not null,
+(Username char(30) not null,
 UserID int primary key
 );
 
 create table Tea
-(name char(30) not null,
+(Teaname char(30) not null,
 TeaID int primary key,
-score float
+brand char(30)
 );
 
 create table UT
@@ -33,7 +33,28 @@ score float not null
 --drop table Userr;
 --drop table Comments;
 
---select* from Userr;
---select* from Tea;
---select* from UT;
---select* from Comments;
+
+--用户信息
+select* from Userr;
+
+--用户喝过的茶的种类、杯数、个人评分
+select Teaname,number,avg_score
+from Tea,UT,
+     (select Tea.TeaID,avg(score)
+      from Tea,Comments
+      where Tea.TeaID = Comments.TeaID
+      group by Tea.TeaID
+	  )as avg_table(avg_TeaID,avg_score)
+where Tea.TeaID = UT.TeaID
+  and Tea.TeaID = avg_TeaID;
+
+
+--茶的信息
+select* from Tea;
+
+
+
+--评论
+select comment,score
+from Comments;
+
