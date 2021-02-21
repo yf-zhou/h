@@ -13,8 +13,22 @@
         <input type="text" id="username" name="username"><br>
         <label for="pwd">Password:</label><br>
         <input type="password" id="pwd" name="pwd"><br>
-        <input type="submit" value="Login">
-        /*not sure how to check if password is correct using database*/
+        <!--<input type="submit" value="Login">-->
+        <!--not sure how to check if password is correct using database-->
+        <script>
+            
+        function cond(){
+            var u=document.getElementById("username").value;
+            var p=document.getElementById("pwd").value;
+            if(u=="guest-user" && p=="password"){
+                // redirect to welcome page
+                document.location.href="user_home_page.htm";
+            } else{
+                document.write("Invalid Name");
+            }
+        }
+        </script>
+        <button type="button" onclick="cond()">Log In</button>
     </form>
     </body>
 </html>
