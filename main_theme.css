@@ -3,18 +3,27 @@ body {
 	background-position: left top, left top;
 	background-size: auto, 100% 1200px;
 	background-repeat: no-repeat, no-repeat;
+	position: relative;
+	left: 100px;
+	top: 250px;
+	background-color: black;
+	
 }
 h1 {
 	color: pink;
 	position: relative;
-	left: 70px;
+	left: -30px;
+	top: -250px;
 }
 a{
 	color: white;
+	
 }
 form{
 	color: white;
+	
 }
 label {
 	color: white;
+	
 }
